@@ -1,0 +1,102 @@
+﻿@model IEnumerable<IdentityRole>
+@* @model CombinedVM *@
+
+@{
+    ViewBag.Title = "List of roles";
+}
+<h5 class="text-center">List of created roles</h5>
+
+
+<div class="text-center mb-4">
+    <a asp-action="CreateRole" asp-controller="Administration" class="btn btn-primary">Create new role</a>
+</div>
+
+
+<div class="row">
+    <div class="container-fluid col-lg-7 col-md-6 col-sm-6 justify-content-center">
+        <table class="table table-bordered table-responsive">
+            <thead>
+                <tr>
+                    @* <th> Role Id</th> *@
+                    <th class="col-4">Role Name</th>
+                    <th class="col-3">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.Any())
+                {
+                    foreach (var role in Model)
+                    {
+                        <tr>
+                            @* <td>@role.Id</td> *@
+                            <td>@role.Name</td>
+                            <td>
+                                <a asp-action="EditRole" asp-controller="Administration" asp-route-id="@role.Id">Edit</a>  |
+                                @* <a data-bs-toggle="modal" data-bs-target="#exampleModal" asp-route-id="@role.Id">Edit Role</a> *@
+
+                                <a asp-action="DeleteRole" asp-controller="Administration" asp-route-id="@role.Id" class="text-danger" onclick="return confirm('Are you sure you want to delete @role.Name role?')"> Delete</a>
+                            </td>
+
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <div class="text-center">
+                        <h5>No roles created</h5><br />
+                        <a asp-action="CreateRole" asp-controller="Administration" class="btn btn-primary mb-4">Create role</a>
+                    </div>
+                }
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+
+
+
+@* <div class="container-fluid col-lg-7 col-md-6 justify-content-center">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit Role</button>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Edit Role</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form asp-action="EditRole" asp-controller="Administration" method="post">
+                        <div class="mb-3">
+                            <input hidden type="text" class="form-control" id="Id" />
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="@Model.EditRoleVM.Name" class="col-form-label">Role Name</label>
+                            <input class="form-control" type="text" />
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> *@
+<script>
+    function ConfirmDelete(roleId, isTrue) {
+        var deleteSpan = 'deleteSpan_' + roleId;
+        var confirmDeleteSpan = 'confirmDeleteSpan_' + roleId;
+
+        if (isTrue) {
+            $('#' + deleteSpan).hide();
+            $('#' + confirmDeleteSpan).show();
+        }
+        else {
+            $('#' + deleteSpan).show();
+            $('#' + confirmDeleteSpan).hide();
+        }
+    }
+</script>

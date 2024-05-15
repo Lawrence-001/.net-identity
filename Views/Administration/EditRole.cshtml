@@ -1,0 +1,51 @@
+﻿@model EditRoleVM
+@{
+    ViewBag.Title = "Edit Roles";
+}
+<h5 class="text-center">Edit Roles</h5>
+<div class="row">
+    <div class="container-fluid col-lg-7 col-md-6 justify-content-center">
+        <form method="post" asp-action="EditRole" asp-controller="Administration">
+            <div asp-validation-summary="All" class="text-danger"> </div>
+            <input hidden asp-for="Id" />
+            <div>
+                <label asp-for="Name"></label>
+                <input asp-for="Name" class="form-control" />
+            </div><br />
+            <button type="submit" class="btn btn-primary">Update</button>
+
+            @* <input type="submit" asp-action="EditRole" asp-controller="Administration" class="btn btn-primary" value="update" />| *@
+            <a asp-action="AllRoles" asp-controller="Administration" class="btn btn-success">Cancel</a>
+        </form>
+    </div>
+</div>
+<div class="row mt-4">
+    <div class="container-fluid col-lg-7 col-md-6 justify-content-center">
+        <form method="post">
+            <div class="card">
+                <div class="card-header">
+                    <h4>Users in this role</h4>
+                </div>
+                <div class="card-body">
+                    @if (Model.Users != null && Model.Users.Any())
+                    {
+                        foreach (var user in Model.Users)
+                        {
+                            <h5 class="card-title">@user</h5>
+                        }
+                    }
+                    else
+                    {
+                        <h4>There are no users in this role</h4>
+                    }
+                </div>
+                <div class="card-footer">
+                    <a class="btn btn-primary" asp-route-roleId="@Model.Id" asp-action="EditUsersInRole"
+                       asp-controller="Administration">
+                        Add or Remove User(s) from this role
+                    </a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+﻿@model IEnumerable<ApplicationUser>
+@{
+    ViewData["Title"] = "All Users";
+}
+
+<div class="row mb-4">
+    <div class="col-md-4 col-lg-4">
+        <a class="btn btn-primary" asp-action="Register" asp-controller="Auth"> Create New User</a>
+    </div>
+</div>
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-info alert-dismissible" role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        @TempData["Success"]
+    </div>
+}
+<div class="row">
+    <div class="container-fluid col-md-12 col-lg-12 justify-content-center">
+
+        <table class="table table-bordered table-responsive">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>CreatedBy</th>
+                    <th class="4">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in Model)
+                {
+                    <tr>
+                        <td>@user.FName </td>
+                        <td>@user.LName</td>
+                        <td>@user.Email</td>
+                        <td>@user.CreatedBy</td>
+                        <td class="4">
+                            <a asp-action="EditUser" asp-controller="Administration" asp-route-id="@user.Id">Edit</a>
+
+                            <a asp-action="DeleteUser" asp-controller="Administration" asp-route-id="@user.Id" class="text-danger"> Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+            <tfoot>
+            </tfoot>
+        </table>
+    </div>
+
+</div>

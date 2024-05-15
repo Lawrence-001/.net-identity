@@ -1,0 +1,27 @@
+﻿@model LoginVM;
+@{
+    ViewBag.Title = "Login";
+}
+
+<div class="container-fluid col-lg-5 col-md-6">
+    <form method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input type="hidden" name="ReturnUrl" value="@ViewBag.ReturnUrl" />
+        <div>
+            <label asp-for="Email"></label>
+            <input asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div>
+            <label asp-for="Password"></label>
+            <input asp-for="Password" class="form-control" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div><br />
+        <div>
+            <button type="submit" class="btn btn-outline-success mb-2" asp-action="Login" asp-controller="Auth">Login</button>
+        </div>
+        <div> <p>Not yet registered? <a asp-action="Register" asp-controller="Auth">Register here</a></p>  </div>
+
+
+    </form>
+</div>

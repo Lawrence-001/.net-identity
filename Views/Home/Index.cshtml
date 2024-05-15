@@ -1,0 +1,62 @@
+﻿@inject SignInManager<ApplicationUser> _signInManager
+@model IEnumerable<Product>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center mb-3">
+    <h1 class="display-4"></h1>
+</div>
+
+<div class="row mb-4">
+    <div class="col-md-4 col-lg-4">
+        <a class="btn btn-primary" asp-action="CreateProduct" asp-controller="Home"> Create Product</a>
+    </div>
+</div>
+<div class="row justify-content-center col-lg-8 col-md-8">
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-info alert-dismissible" role="alert">
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            @TempData["Success"]
+        </div>
+    }
+</div>
+<div class="row">
+    <div class="container-fluid col-md-12 col-lg-12 justify-content-center">
+
+        <table class="table table-bordered table-responsive">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>CreatedBy</th>
+                    <th class="4">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Product product in Model)
+                {
+                    <tr>
+                        <td>@product.Name </td>
+                        <td>@product.Description</td>
+                        <td>@product.Price</td>
+                        <td>@product.CreatedBy</td>
+                        <td class="4">
+                            <a asp-action="EditProduct" asp-controller="Home" asp-route-id="@product.Id">Edit</a>
+                            
+                                <a asp-action="DeleteProduct" asp-controller="Home" asp-route-id="@product.Id" class="text-danger"> Delete</a>
+                            @if (_signInManager.IsSignedIn(User) && User.IsInRole("Super Admin"))
+                            {
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+            <tfoot>
+            </tfoot>
+        </table>
+    </div>
+
+</div>

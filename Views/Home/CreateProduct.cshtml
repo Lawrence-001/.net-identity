@@ -1,0 +1,31 @@
+﻿@model CreateProductVM
+
+@{
+    ViewBag.Title = "Create a new product";
+}
+<h4 class="text-center">Create a new Product</h4>
+<div class="row">
+    <div class="container-fluid col-sm-8 col-md-7 col-lg-6">
+        <form class="form-group" method="post" asp-action="CreateProduct" asp-controller="home">
+            <div class="text-danger" asp-validation-summary="All">
+            </div>
+            <div>
+                <label asp-for="Name"></label>
+                <input asp-for="Name" class="form-control" />
+            </div>
+            <div>
+                <label asp-for="Description"></label>
+                <textarea asp-for="Description" class="form-control"></textarea>
+            </div>
+            <div>
+                <label asp-for="Price"></label>
+                <input asp-for="Price" class="form-control" />
+            </div><br />
+            <div>
+                <button type="submit" asp-action="CreateProduct" asp-controller="Home" class="btn btn-outline-primary"> Add Product</button>
+                <a asp-action="index" asp-controller="Home" class="btn btn-outline-info float-right">Show All Products</a>
+            </div>
+        </form>
+
+    </div>
+</div>

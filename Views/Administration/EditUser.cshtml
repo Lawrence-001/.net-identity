@@ -1,0 +1,92 @@
+﻿@model EditUserVM
+@{
+    ViewData["Title"] = "Edit User";
+}
+
+<div class="row">
+    <div class="container-fluid col-lg-7 col-md-6 justify-content-center">
+
+        <form method="post" asp-action="EditUser" asp-controller="Administration">
+            @*  @if (TempData["Successful"] != null)
+            {
+            <div class="alert alert-info alert-dismissible" role="alert">
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            @TempData["Successful"]
+            </div>
+            } *@
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input hidden asp-for="@Model.Id" />
+            <div>
+                <label asp-for="FName"></label>
+                <input asp-for="FName" class="form-control" />
+                <span asp-validation-for="FName" class="text-danger"></span>
+            </div>
+            <div>
+                <label asp-for="LName"></label>
+                <input asp-for="LName" class="form-control" />
+                <span asp-validation-for="LName" class="text-danger"></span>
+            </div>
+            <div>
+                <label asp-for="Email"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div><br />
+
+            <div>
+                <button type="submit" class="btn btn-primary mb-2" asp-action="EditUser" asp-controller="Administration">Update</button>
+                <a class="btn btn-success mb-2" asp-action="AllUsers" asp-controller="Administration">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="row">
+    <div class="container-fluid col-lg-7 col-md-6 justify-content-center mb-4">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title"> User Roles</h5>
+            </div>
+            <div class="card-body">
+                @if (Model.Roles.Any())
+                {
+                    foreach (var role in Model.Roles)
+                    {
+                        @role <br />
+                    }
+                }
+                else
+                {
+                    <h5>This user does not have any role(s)</h5>
+                }
+            </div>
+            <div class="card-footer">
+                <a class="btn btn-primary" asp-action="AllRoles" asp-controller="Administration">Manage roles</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="container-fluid col-lg-7 col-md-6 justify-content-center">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title"> User Claims</h5>
+            </div>
+            <div class="card-body">
+                @if (Model.Claims.Any())
+                {
+                    foreach (var claim in Model.Claims)
+                    {
+                        @claim <br />
+                    }
+                }
+                else
+                {
+                    <h5>This user does not have any claim(s)</h5>
+                }
+            </div>
+            <div class="card-footer">
+                <a class="btn btn-primary" asp-action="" asp-controller="">Manage Roles</a>
+            </div>
+        </div>
+    </div>
+</div>
+
