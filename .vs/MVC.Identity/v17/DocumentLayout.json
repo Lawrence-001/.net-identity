@@ -3,24 +3,32 @@
   "WorkspaceRootPath": "D:\\Projects\\MVC.Identity\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DBECEF1B-3292-4D3D-90C1-CF13DB6C2450}|MVC.Identity.csproj|d:\\projects\\mvc.identity\\views\\administration\\allusers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DBECEF1B-3292-4D3D-90C1-CF13DB6C2450}|MVC.Identity.csproj|solutionrelative:views\\administration\\allusers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DBECEF1B-3292-4D3D-90C1-CF13DB6C2450}|MVC.Identity.csproj|d:\\projects\\mvc.identity\\views\\administration\\edituser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DBECEF1B-3292-4D3D-90C1-CF13DB6C2450}|MVC.Identity.csproj|solutionrelative:views\\administration\\edituser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DBECEF1B-3292-4D3D-90C1-CF13DB6C2450}|MVC.Identity.csproj|d:\\projects\\mvc.identity\\views\\administration\\allroles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DBECEF1B-3292-4D3D-90C1-CF13DB6C2450}|MVC.Identity.csproj|solutionrelative:views\\administration\\allroles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DBECEF1B-3292-4D3D-90C1-CF13DB6C2450}|MVC.Identity.csproj|d:\\projects\\mvc.identity\\controllers\\administrationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DBECEF1B-3292-4D3D-90C1-CF13DB6C2450}|MVC.Identity.csproj|solutionrelative:controllers\\administrationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DBECEF1B-3292-4D3D-90C1-CF13DB6C2450}|MVC.Identity.csproj|d:\\projects\\mvc.identity\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DBECEF1B-3292-4D3D-90C1-CF13DB6C2450}|MVC.Identity.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DBECEF1B-3292-4D3D-90C1-CF13DB6C2450}|MVC.Identity.csproj|d:\\projects\\mvc.identity\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DBECEF1B-3292-4D3D-90C1-CF13DB6C2450}|MVC.Identity.csproj|solutionrelative:views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBECEF1B-3292-4D3D-90C1-CF13DB6C2450}|MVC.Identity.csproj|d:\\projects\\mvc.identity\\controllers\\errorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBECEF1B-3292-4D3D-90C1-CF13DB6C2450}|MVC.Identity.csproj|solutionrelative:controllers\\errorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBECEF1B-3292-4D3D-90C1-CF13DB6C2450}|MVC.Identity.csproj|d:\\projects\\mvc.identity\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBECEF1B-3292-4D3D-90C1-CF13DB6C2450}|MVC.Identity.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBECEF1B-3292-4D3D-90C1-CF13DB6C2450}|MVC.Identity.csproj|d:\\projects\\mvc.identity\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBECEF1B-3292-4D3D-90C1-CF13DB6C2450}|MVC.Identity.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBECEF1B-3292-4D3D-90C1-CF13DB6C2450}|MVC.Identity.csproj|d:\\projects\\mvc.identity\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBECEF1B-3292-4D3D-90C1-CF13DB6C2450}|MVC.Identity.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBECEF1B-3292-4D3D-90C1-CF13DB6C2450}|MVC.Identity.csproj|d:\\projects\\mvc.identity\\views\\administration\\allusers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DBECEF1B-3292-4D3D-90C1-CF13DB6C2450}|MVC.Identity.csproj|solutionrelative:views\\administration\\allusers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,68 +38,98 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AllUsers.cshtml",
-              "DocumentMoniker": "D:\\Projects\\MVC.Identity\\Views\\Administration\\AllUsers.cshtml",
-              "RelativeDocumentMoniker": "Views\\Administration\\AllUsers.cshtml",
-              "ToolTip": "D:\\Projects\\MVC.Identity\\Views\\Administration\\AllUsers.cshtml",
-              "RelativeToolTip": "Views\\Administration\\AllUsers.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAABAAAA",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Projects\\MVC.Identity\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Projects\\MVC.Identity\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAACkAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T13:00:11.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "D:\\Projects\\MVC.Identity\\Views\\Shared\\Error.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\Error.cshtml",
+              "ToolTip": "D:\\Projects\\MVC.Identity\\Views\\Shared\\Error.cshtml",
+              "RelativeToolTip": "Views\\Shared\\Error.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-15T12:27:03.497Z",
+              "WhenOpened": "2024-05-16T12:58:55.463Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AllRoles.cshtml",
-              "DocumentMoniker": "D:\\Projects\\MVC.Identity\\Views\\Administration\\AllRoles.cshtml",
-              "RelativeDocumentMoniker": "Views\\Administration\\AllRoles.cshtml",
-              "ToolTip": "D:\\Projects\\MVC.Identity\\Views\\Administration\\AllRoles.cshtml",
-              "RelativeToolTip": "Views\\Administration\\AllRoles.cshtml",
-              "ViewState": "AQIAACoAAAAAAAAAAAAAAA8AAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-15T11:56:34.505Z"
+              "Title": "ErrorController.cs",
+              "DocumentMoniker": "D:\\Projects\\MVC.Identity\\Controllers\\ErrorController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ErrorController.cs",
+              "ToolTip": "D:\\Projects\\MVC.Identity\\Controllers\\ErrorController.cs",
+              "RelativeToolTip": "Controllers\\ErrorController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAwBEAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T12:51:14.045Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EditUser.cshtml",
-              "DocumentMoniker": "D:\\Projects\\MVC.Identity\\Views\\Administration\\EditUser.cshtml",
-              "RelativeDocumentMoniker": "Views\\Administration\\EditUser.cshtml",
-              "ToolTip": "D:\\Projects\\MVC.Identity\\Views\\Administration\\EditUser.cshtml",
-              "RelativeToolTip": "Views\\Administration\\EditUser.cshtml",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAAAEkAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-15T11:46:53.703Z"
+              "DocumentIndex": 5,
+              "Title": "AppDBContext.cs",
+              "DocumentMoniker": "D:\\Projects\\MVC.Identity\\Data\\AppDBContext.cs",
+              "RelativeDocumentMoniker": "Data\\AppDBContext.cs",
+              "ToolTip": "D:\\Projects\\MVC.Identity\\Data\\AppDBContext.cs",
+              "RelativeToolTip": "Data\\AppDBContext.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBIAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T12:29:40.673Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
+              "Title": "AllUsers.cshtml",
+              "DocumentMoniker": "D:\\Projects\\MVC.Identity\\Views\\Administration\\AllUsers.cshtml",
+              "RelativeDocumentMoniker": "Views\\Administration\\AllUsers.cshtml",
+              "ToolTip": "D:\\Projects\\MVC.Identity\\Views\\Administration\\AllUsers.cshtml",
+              "RelativeToolTip": "Views\\Administration\\AllUsers.cshtml",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAACoAAABpAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-16T12:21:30.078Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "AdministrationController.cs",
               "DocumentMoniker": "D:\\Projects\\MVC.Identity\\Controllers\\AdministrationController.cs",
               "RelativeDocumentMoniker": "Controllers\\AdministrationController.cs",
               "ToolTip": "D:\\Projects\\MVC.Identity\\Controllers\\AdministrationController.cs",
               "RelativeToolTip": "Controllers\\AdministrationController.cs",
-              "ViewState": "AQIAAPoAAAAAAAAAAAAmwAUBAABGAAAA",
+              "ViewState": "AQIAAJEAAAAAAAAAAAAwwJ0AAAB4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T06:35:10.731Z"
+              "WhenOpened": "2024-05-16T11:31:28.23Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\Projects\\MVC.Identity\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
-              "ToolTip": "D:\\Projects\\MVC.Identity\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "Controllers\\AuthController.cs",
-              "ViewState": "AQIAAD4AAAAAAAAAAAAowEoAAAAVAAAA",
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\Projects\\MVC.Identity\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "D:\\Projects\\MVC.Identity\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AQIAAGEAAAAAAAAAAAAwwHEAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T19:38:18.704Z"
+              "WhenOpened": "2024-05-16T13:01:00.064Z",
+              "EditorCaption": ""
             }
           ]
         }

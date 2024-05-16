@@ -257,3 +257,4 @@ D:\Projects\MVC.Identity\obj\Debug\net8.0\refint\MVC.Identity.dll
 D:\Projects\MVC.Identity\obj\Debug\net8.0\MVC.Identity.pdb
 D:\Projects\MVC.Identity\obj\Debug\net8.0\MVC.Identity.genruntimeconfig.cache
 D:\Projects\MVC.Identity\obj\Debug\net8.0\ref\MVC.Identity.dll
+D:\Projects\MVC.Identity\obj\Debug\net8.0\MVC.Identity.sourcelink.json

@@ -125,19 +125,43 @@ namespace MVC.Identity.Controllers
         public async Task<IActionResult> DeleteRole(string id)
         {
             var role = await _roleManager.FindByIdAsync(id);
-            if (role != null)
+            if (role == null)
             {
-                var result = await _roleManager.DeleteAsync(role);
-                if (result.Succeeded)
-                {
-                    return RedirectToAction("AllRoles");
-                }
-                foreach (var error in result.Errors)
-                {
-                    ModelState.AddModelError("", error.Description);
-                }
+                ViewBag.ErrorMessage = $"Role with Id = {id} cannot be found";
+                return View("NotFound");
             }
-            return View("AllRoles");
+            else
+            {
+                try
+                {
+                    var result = await _roleManager.DeleteAsync(role);
+                    if (result.Succeeded)
+                    {
+                        return RedirectToAction("AllRoles");
+                    }
+                    foreach (var error in result.Errors)
+                    {
+                        ModelState.AddModelError("", error.Description);
+                    }
+                    return View("AllRoles");
+                }
+                // If the exception is DbUpdateException, we know we are not able to
+                // delete the role as there are users in the role being deleted
+                catch (DbUpdateException ex)
+                {
+                    ViewBag.Error = ex.Message;
+
+                    // Pass the ErrorTitle and ErrorMessage that you want to show to the user using ViewBag.
+                    // The Error view retrieves this data from the ViewBag and displays to the user.
+                    ViewBag.ErrorTitle = $"{role.Name} Role is in Use";
+                    ViewBag.ErrorMessage = $"{role.Name} Role cannot be deleted as there are users in this role. " +
+                        $"If you want to delete this role, please remove the users from the role and then try to delete.";
+                    return View("Error");
+                    throw;
+                }
+
+            }
+
         }
 
         [HttpGet]
@@ -256,7 +280,7 @@ namespace MVC.Identity.Controllers
 
                 user.UserName = editUserVM.Email;
                 var result = await _userManager.UpdateAsync(user);
-                
+
                 if (result.Succeeded)
                 {
                     TempData["Success"] = "User updated successfully";
@@ -270,8 +294,22 @@ namespace MVC.Identity.Controllers
             return View(editUserVM);
         }
 
-        public IActionResult DeleteUser()
+        [HttpPost]
+        public async Task<IActionResult> DeleteUser(string id)
         {
+            var userToDelete = await _userManager.FindByIdAsync(id);
+            if (userToDelete != null)
+            {
+                var result = await _userManager.DeleteAsync(userToDelete);
+                if (result.Succeeded)
+                {
+                    return RedirectToAction("AllUsers");
+                }
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError("", error.Description);
+                }
+            }
             return View("NotFound");
         }
     }
